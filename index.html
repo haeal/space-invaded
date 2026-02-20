@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Space Invaded</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <canvas id="game-canvas"></canvas>
+
+  <div id="hud"></div>
+
+  <!-- MENU SCREEN -->
+  <div id="menu-screen" class="overlay">
+    <div class="overlay-content">
+      <h1 class="title glow-text">SPACE INVADED</h1>
+      <p class="subtitle">DEFEND YOUR PLANET</p>
+      <div class="instructions">
+        <p><span class="key">&#8592; &#8594;</span> or <span class="key">A D</span> &mdash; Move</p>
+        <p><span class="key">SPACE</span> &mdash; Fire</p>
+        <p><span class="key">ESC</span> &mdash; Pause</p>
+      </div>
+      <p class="prompt blink">PRESS ENTER OR SPACE TO START</p>
+    </div>
+  </div>
+
+  <!-- PAUSE SCREEN -->
+  <div id="pause-screen" class="overlay hidden">
+    <div class="overlay-content">
+      <h2 class="glow-text">PAUSED</h2>
+      <p class="prompt blink">PRESS ESC OR ENTER TO RESUME</p>
+    </div>
+  </div>
+
+  <!-- GAME OVER SCREEN -->
+  <div id="game-over-screen" class="overlay hidden">
+    <div class="overlay-content">
+      <h2 class="glow-text game-over-text">GAME OVER</h2>
+      <p>SCORE: <span id="final-score" class="score-val">0</span></p>
+      <p>HIGH SCORE: <span id="final-high" class="score-val">0</span></p>
+      <p class="prompt blink">PRESS ENTER OR SPACE TO RESTART</p>
+    </div>
+  </div>
+
+  <!-- WAVE INTRO SCREEN -->
+  <div id="wave-intro-screen" class="overlay hidden">
+    <div class="overlay-content">
+      <h2 class="glow-text wave-text">WAVE <span id="wave-intro-number">1</span></h2>
+      <p class="subtitle">INCOMING EARTHLINGS</p>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
